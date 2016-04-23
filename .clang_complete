@@ -1,0 +1,42 @@
+-IC:\Users\Ben\.platformio\packages\framework-arduinoavr\variants\standard
+-IC:\Users\Ben\.platformio\packages\framework-arduinoavr\cores\arduino
+-IH:\platformio projects\laser pointer\lib\Blynk
+-IH:\platformio projects\laser pointer\lib\BlynkESP8266_HardSer
+-IH:\platformio projects\laser pointer\lib\BlynkESP8266_SoftSer
+-IH:\platformio projects\laser pointer\lib\SimpleTimer
+-IH:\platformio projects\laser pointer\lib\Time
+-IC:\Users\Ben\.platformio\lib\PubSubClient_ID89\src
+-IC:\Users\Ben\.platformio\packages\framework-arduinoavr\libraries\Bridge\src
+-IC:\Users\Ben\.platformio\packages\framework-arduinoavr\libraries\EEPROM\src
+-IC:\Users\Ben\.platformio\packages\framework-arduinoavr\libraries\Esplora\src
+-IC:\Users\Ben\.platformio\packages\framework-arduinoavr\libraries\Ethernet\src
+-IC:\Users\Ben\.platformio\packages\framework-arduinoavr\libraries\Firmata
+-IC:\Users\Ben\.platformio\packages\framework-arduinoavr\libraries\GSM\src
+-IC:\Users\Ben\.platformio\packages\framework-arduinoavr\libraries\HID\src
+-IC:\Users\Ben\.platformio\packages\framework-arduinoavr\libraries\Keyboard\src
+-IC:\Users\Ben\.platformio\packages\framework-arduinoavr\libraries\LiquidCrystal\src
+-IC:\Users\Ben\.platformio\packages\framework-arduinoavr\libraries\Mouse\src
+-IC:\Users\Ben\.platformio\packages\framework-arduinoavr\libraries\RobotIRremote\src
+-IC:\Users\Ben\.platformio\packages\framework-arduinoavr\libraries\Robot_Control\src
+-IC:\Users\Ben\.platformio\packages\framework-arduinoavr\libraries\Robot_Motor\src
+-IC:\Users\Ben\.platformio\packages\framework-arduinoavr\libraries\SD\src
+-IC:\Users\Ben\.platformio\packages\framework-arduinoavr\libraries\SPI\src
+-IC:\Users\Ben\.platformio\packages\framework-arduinoavr\libraries\Scheduler\src
+-IC:\Users\Ben\.platformio\packages\framework-arduinoavr\libraries\Servo\src
+-IC:\Users\Ben\.platformio\packages\framework-arduinoavr\libraries\SoftwareSerial\src
+-IC:\Users\Ben\.platformio\packages\framework-arduinoavr\libraries\SpacebrewYun\src
+-IC:\Users\Ben\.platformio\packages\framework-arduinoavr\libraries\Stepper\src
+-IC:\Users\Ben\.platformio\packages\framework-arduinoavr\libraries\TFT\src
+-IC:\Users\Ben\.platformio\packages\framework-arduinoavr\libraries\Temboo\src
+-IC:\Users\Ben\.platformio\packages\framework-arduinoavr\libraries\USBHost\src
+-IC:\Users\Ben\.platformio\packages\framework-arduinoavr\libraries\WiFi\src
+-IC:\Users\Ben\.platformio\packages\framework-arduinoavr\libraries\Wire\src
+-IC:\Users\Ben\.platformio\packages\toolchain-atmelavr\avr\include
+-IC:\Users\Ben\.platformio\packages\toolchain-atmelavr\lib\gcc\avr\4.8.1\include
+-IC:\Users\Ben\.platformio\packages\toolchain-atmelavr\lib\gcc\avr\4.8.1\include-fixed
+-DF_CPU=16000000L
+-DARDUINO_ARCH_AVR
+-DARDUINO_AVR_UNO
+-DARDUINO=10608
+-DPLATFORMIO=020806
+-D__AVR_ATmega328P__
