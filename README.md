@@ -68,6 +68,7 @@ first.
 
 >x1=0
 
+Now for maximum value:
 
 >x=10
 
