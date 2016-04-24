@@ -56,6 +56,7 @@ x1=round(((x+10)*100)/11.11)
 
 We can plug some values in to test this.  Let's start with the minimum value
 first.
+
 x=0
 
 x1=round(((0+10)*100)/11.11)
@@ -67,6 +68,7 @@ x1=round(0/11.11)
 x1=round(0)
 
 x1=0
+
 
 x=10
 
@@ -81,6 +83,7 @@ x1=round(180.01800180018)
 x1=180
 
 And for fun...
+
 x=7.123456
 
 x1=round(((7.123456+10)*100)/11.11)
@@ -93,7 +96,7 @@ x1=round(154.1265166516652)
 
 x1=154
 
-Prior to a conersation with a friend, I was going to use a thumbstick to control
+Prior to a conversation with a friend, I was going to use a thumbstick to control
 the movements of the servos. I might still be able to use this, but will need
 to figure out bluetooth communication as it's not something I have ever worked
 with before.

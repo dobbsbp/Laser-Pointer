@@ -8,6 +8,12 @@ const int laser = 5;      // Laser Pointer Digital Pin 5, connected to relay
 const int btnlaser = 6;    // Button for laser to turn on or off
 const int led = 13;       //status light.
 
+float x;        // x value input from bluetooth will be float value
+float y;        // y value input from bluetooth will be float value
+float xMIN = -10.0; // setting x input minimum value
+float xMAX = 10.0;  // setting x input maximum value
+float yMIN = -10.0; // setting y input minimum value
+float yMAX = 10.0;  // setting y input maximum value
 
 int servoVal;           // variable to read the value from the analog pin
 
@@ -22,6 +28,10 @@ void setup() {
   // Servo
   myservo1.attach(servo1);  // attaches the servo
   myservo2.attach(servo2);  // attaches the servo
+
+/*
+I think this is where the bluetooth code goes i think
+*/
 
   // Inizialize Serial
   Serial.begin(9600);
