@@ -9,23 +9,23 @@ const int laser = 5;      // Laser Pointer Digital Pin 5, connected to relay
 const int btnlaser = 6;    // Button for laser to turn on or off
 const int led = 13;       //status light.
 
-int incomingString = 0,0;
+// int incomingString = 0,0;  //need to figure out input string(s)
 
-/*
 float x;        // x value input from bluetooth will be float value
 float y;        // y value input from bluetooth will be float value
-float xMIN = -10.0; // setting x input minimum value
-float xMAX = 10.0;  // setting x input maximum value
-float yMIN = -10.0; // setting y input minimum value
-float yMAX = 10.0;  // setting y input maximum value
-float x1 = round((x + 10) * 8) * (180 / 160);
-float y1 = round((y + 10) * 8) * (180 / 160);
-*/
+// float xMIN = -10.0; // setting x input minimum value
+// float xMAX = 10.0;  // setting x input maximum value
+// float yMIN = -10.0; // setting y input minimum value
+// float yMAX = 10.0;  // setting y input maximum value
+float x1; //= round((x + 10) * 8) * (180 / 160);
+float y1; //= round((y + 10) * 8) * (180 / 160);
+float xcon;
+float ycon;
 
-int servoVal;    // variable to read the value from the analog pin (might not be needed -ben)
+//int servoVal;    // variable to read the value from the analog pin (might not be needed -ben)
 
-Servo myservo1;  // create servo object to control a servo
-Servo myservo2;  // create servo object to control a servo
+Servo servoX;  // create servo object to control a servo
+Servo servoY;  // create servo object to control a servo
 
 
 
@@ -33,22 +33,31 @@ void setup() {
   pinMode(laser, OUTPUT);
   pinMode(btnlaser, INPUT_PULLUP); // Saving wire, resistor, and headaches.
   // Servo
-  myservo1.attach(servo1);  // attaches the servo
-  myservo2.attach(servo2);  // attaches the servo
+  servoX.attach(9);  // attaches the servo
+  servoY.attach(10);  // attaches the servo
 
+  servoX.write(90);   //setting servos to 90 degrees so they are centered.
+  servoY.write(90);
 
 
   // Inizialize Serial
-  Serial.begin(9600); // This starts the bluetooth connection on RX and TX
+//  Serial.begin(9600); // default
+  Serial.begin(115200); // for virtual shield
 }
 
 
 void loop(){
 
-    Serial.read(incomingString)  //read incoming string from bluetooth
+    Serial.read(incomingString);  //read incoming string from bluetooth
 
-    **NEED TO PROCESS STRING HERE**
+  **NEED TO PROCESS STRING HERE**
+    //input from sensor xcon = constrain(x,-10,10)
+    //input from sesnor ycon = constrain(y,-10,10)
+    float x1 = round((xcon + 10) * 8) * (180 / 160);
+    float y1 = round((ycon + 10) * 8) * (180 / 160);
 
+    servoX.write(x1);
+    servoY.write(y1);
 
     int laserstate = digitalRead(btnlaser); //this sets the laser button state each cycle
     digitalWrite(laser, laserstate);        //this turns laser on or off depending on laserstate
