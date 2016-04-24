@@ -35,15 +35,15 @@ The Math explained:
 x1 needs to be positive (or zero) so we add the opposite value of the lowest x
 value.
 
-x1=x+10
+>x1=x+10
 
 We need to work with whole numbers so we need to round.
 
-x1=round(x+10)
+>x1=round(x+10)
 
 But, we also need more resolution to get 1 degree increments!
 
-x1=round((x+10)*100)
+>x1=round((x+10)*100)
 
 The maximum value of x is 10.  The maximum value for servos is 180. Therefore
 as the current formula stands, the maximum value is (10+10)*100 or 2000.  This
@@ -56,27 +56,43 @@ x1=round(((x+10)*100)/11.11)
 
 We can plug some values in to test this.  Let's start with the minimum value
 first.
-x=0
-x1=round(((0+10)*100)/11.11)
-x1=round((0*100)/11.11)
-x1=round(0/11.11)
-x1=round(0)
-x1=0
+>x=0
 
-x=10
-x1=round(((10+10)*100)/11.11)
-x1=round((20*100)/11.11)
-x1=round(2000/11.11)
-x1=round(180.01800180018)
-x1=180
+>x1=round(((0+10)*100)/11.11)
+
+>x1=round((0*100)/11.11)
+
+>x1=round(0/11.11)
+
+>x1=round(0)
+
+>x1=0
+
+
+>x=10
+
+>x1=round(((10+10)*100)/11.11)
+
+>x1=round((20*100)/11.11)
+
+>x1=round(2000/11.11)
+
+>x1=round(180.01800180018)
+
+>x1=180
 
 And for fun...
-x=7.123456
-x1=round(((7.123456+10)*100)/11.11)
-x1=round((17.123456*100)11.11)
-x1=round(1712.3456/11.11)
-x1=round(154.1265166516652)
-x1=154
+>x=7.123456
+
+>x1=round(((7.123456+10)*100)/11.11)
+
+>x1=round((17.123456*100)11.11)
+
+>x1=round(1712.3456/11.11)
+
+>x1=round(154.1265166516652)
+
+>x1=154
 
 Prior to a conersation with a friend, I was going to use a thumbstick to control
 the movements of the servos. I might still be able to use this, but will need
