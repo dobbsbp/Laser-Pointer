@@ -35,17 +35,16 @@ The maximum value of the servo motors is 180.
 
 I came up with the following.
 
-`float x = sensorx;  //not sure what to call this just yet
+>float x = sensorx;  //not sure what to call this just yet
 
-float xcon = constrain(sensorx,-10.0, 10.0);  //this constrains values between -10 to 10
+>float xcon = constrain(sensorx,-10.0, 10.0);  //this constrains values between -10 to 10
 
-float x1 = round((xcon + 10.0) * 8.0) * (180.0 / 160.0);  //converts x to degrees.`
+>float x1 = round((xcon + 10.0) * 8.0) * (180.0 / 160.0);  //converts x to degrees.`
 
 ### So in steps it's like this:
 1. Assign the value from the sensor to x.
 2. Take the sensor value and constrain it to values between -10 and 10.
-3. Convert the constrained value of x (xcon) and convert it to a degree range of 0-180.
-..* The math here can vary.  I created a different formula but this one looks tidy. Thanks Dan!
+3. Convert the constrained value of x (xcon) and convert it to a degree range of 0-180. (The math here can vary.  I created a different formula but this one looks tidy. Thanks Dan!)
 
 ## Some thoughts and Ponderings:
 
