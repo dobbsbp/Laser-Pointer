@@ -51,10 +51,12 @@ void loop(){
     Serial.read(incomingString);  //read incoming string from bluetooth
 
   **NEED TO PROCESS STRING HERE**
+    //x = input from sensor
+    //y = input from sensor
     //input from sensor xcon = constrain(x,-10,10)
     //input from sesnor ycon = constrain(y,-10,10)
-    float x1 = round((xcon + 10) * 8) * (180 / 160);
-    float y1 = round((ycon + 10) * 8) * (180 / 160);
+    float x1 = round((xcon + 10.0) * 8.0) * (180.0 / 160.0);
+    float y1 = round((ycon + 10.0) * 8.0) * (180.0 / 160.0);
 
     servoX.write(x1);
     servoY.write(y1);

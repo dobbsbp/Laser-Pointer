@@ -1,6 +1,6 @@
 # Laser-Pointer
 
-The Goal:
+## The Goal:
 Create a laser pointer that is moved by two servo motors by using an arduino
 uno, bluetooth HC-05 module, and android phone.
 
@@ -22,7 +22,7 @@ down the accelerometer values directly, then my increments would be limited to
 In other words, we need to do some math. I'll try my best to explain my math
 here, hopefully you can understand what I'm doing.
 
-Conditions:
+## Conditions:
 
 x = value from sensor
 x1 = value to be used with arduino for servo motor.
@@ -31,70 +31,23 @@ Servo motor can only handle positive values.
 The minimum value of the servo motors is 0.
 The maximum value of the servo motors is 180.
 
-The Math explained:
-x1 needs to be positive (or zero) so we add the opposite value of the lowest x
-value.
+## The Math explained:
 
-x1=x+10
+I came up with the following.
 
-We need to work with whole numbers so we need to round.
+`float x = sensorx;  //not sure what to call this just yet
 
-x1=round(x+10)
+float xcon = constrain(sensorx,-10.0, 10.0);  //this constrains values between -10 to 10
 
-But, we also need more resolution to get 1 degree increments!
+float x1 = round((xcon + 10.0) * 8.0) * (180.0 / 160.0);  //converts x to degrees.`
 
-x1=round((x+10)*100)
+### So in steps it's like this:
+1. Assign the value from the sensor to x.
+2. Take the sensor value and constrain it to values between -10 and 10.
+3. Convert the constrained value of x (xcon) and convert it to a degree range of 0-180.
+..* The math here can vary.  I created a different formula but this one looks tidy. Thanks Dan!
 
-The maximum value of x is 10.  The maximum value for servos is 180. Therefore
-as the current formula stands, the maximum value is (10+10)*100 or 2000.  This
-number has to be broken down into 1 degree increments out of 180 degrees.
-2000/180=11.11
-
-And here we have a formula.
-
-x1=round(((x+10)*100)/11.11)
-
-We can plug some values in to test this.  Let's start with the minimum value
-first.
-
-x=0
-
-x1=round(((0+10)*100)/11.11)
-
-x1=round((0*100)/11.11)
-
-x1=round(0/11.11)
-
-x1=round(0)
-
-x1=0
-
-
-x=10
-
-x1=round(((10+10)*100)/11.11)
-
-x1=round((20*100)/11.11)
-
-x1=round(2000/11.11)
-
-x1=round(180.01800180018)
-
-x1=180
-
-And for fun...
-
-x=7.123456
-
-x1=round(((7.123456+10)*100)/11.11)
-
-x1=round((17.123456*100)11.11)
-
-x1=round(1712.3456/11.11)
-
-x1=round(154.1265166516652)
-
-x1=154
+## Some thoughts and Ponderings:
 
 Prior to a conversation with a friend, I was going to use a thumbstick to control
 the movements of the servos. I might still be able to use this, but will need
@@ -104,7 +57,7 @@ with before.
 The ino file has been modified from the instructables project:
 http://www.instructables.com/id/Arduino-2-Servos-Thumbstick-joystick/?ALLSTEPS
 
-And here's some phone data.
+## And here's some phone data:
 
 Z axis can be ignored for this project.
 
