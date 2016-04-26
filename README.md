@@ -58,6 +58,14 @@ http://www.instructables.com/id/Arduino-2-Servos-Thumbstick-joystick/?ALLSTEPS
 
 ## And here's some phone data:
 
+This block is the data output from the VirtualShield app.
+`
+[LOG] Shield = 2
+[Accelerometer] x = -0.575
+[Accelerometer] y = 1.887
+[Accelerometer] z = 10.017
+`
+
 Z axis can be ignored for this project.
 
 180 degrees
